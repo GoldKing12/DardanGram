@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 250px;
+    background: #f8f9fa;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-item a {
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.navbar-nav .nav-item a:hover {
+    text-decoration: underline;
+}
+
+.profile-dropdown {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.profile-dropdown i {
+    margin-right: 10px;
+}
+
+  /* Image Grid */
+  .grid img {
+    border-radius: 8px;
+    transition: opacity 0.7s ease;
+}
+
+.grid img:hover {
+    opacity: 0.8;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-dialog-centered {
+    max-width: 900px;
+    margin: auto;
+}
+
+.modal-content img {
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.modal-content .flex {
+    height: 100%;
+}
+
+.modal1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content1 {
+    position: absolute;
+    top: 50px;
+    right: 450px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .modal-content1 {
+        flex-direction: column;
+    }
+
+    .modal-content1 img {
+        max-height: 300px;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Follow Button */
+.follow-button {
+    color: #2563eb;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.follow-button:hover {
+    color: #1d4ed8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .modal-content img {
+        max-height: 300px;
+    }
+}
+
+#gear-icon {
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+#gear-icon.rotated {
+    transform: rotate(60deg); /* Rotate 60 degrees */
+}
+  
+#dropdown-menu {
+    display: none; /* Hide the dropdown initially */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+}
+
+#dropdown-menu.show {
+    display: block; /* Show the dropdown when the 'show' class is added */
+    width: 200px;
+    margin-left: 290px;
+}
+
+.like-button i {
+    transition: color 0.3s ease;
+}
+
+.like-button .fa-heart {
+    font-size: 1.5rem;
+}
+
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+#img01 {
+    /* margin: auto;
+    display: block; */
+    max-height: 600px;
+    object-fit: cover;
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Profile Page */
+
+.profile-container {
+    max-width: 1200px;
+    margin: 30px 150px;
+    padding: 20px;
+    /* background: #fff; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.stats span {
+    font-weight: bold;
+}
+
+.user-follow {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.bio {
+    margin-top: 10px;
+    color: #555;
+}
+
+.actions {
+    display: flex;
+    gap: 20px; /* Adds space between the buttons */
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.post {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.circular--portrait {
+    position: relative;
+    bottom: 30px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular--portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
