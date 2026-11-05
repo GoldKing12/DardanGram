@@ -24,6 +24,7 @@
 
             <!-- Scripts -->
             @vite(['resources/css/app.css', 'resources/js/app.js'])
+             <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 
             <script src="https://kit.fontawesome.com/87e420d556.js" crossorigin="anonymous"></script>
 

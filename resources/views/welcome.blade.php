@@ -7,6 +7,7 @@
     <link rel="icon" href="{{ asset('instagram-logo.png') }}">
 
     @vite(['resources/js/app.js', 'resources/css/app.css'])
+     <!-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) -->
 </head>
 <body class="bg-gradient-to-b from-gray-900 to-black text-white">
 
